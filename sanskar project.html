@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopify</title>
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="sanskar.css">
+
+
+
+  </head>
+  <body>
+    <section class="wrapper">
+      <section class="card">
+        <div class="img">
+          <img src="https://dev1-cdn.helioswatchstore.com/easyslide/TB-2_1.jpg" alt="">
+        </div>
+        <div class="about">
+          <h2>Tissot</h2>
+          <h3>unisex | T-sport</h3>
+          <h4>Price:38500 <span>45000</span>    <h6>*limited offer</h6></h4>
+          <div class="features">
+            <h4>Watch Glass/Crystal: Sapphire Glass</h4>
+            <h4>Warranty Time Period: 24 Months</h4>
+            <h4>Special Features: Date, Water Resistant</h4> 
+          </div>
+          <div class="buttons">
+            <button id="cart" onclick="change()"class="cart">Add to cart</button>
+            <button id="wish" onclick="changeColor()" class="wish"><i id="bi" class="bi bi-suit-heart-fill"></i></button>
+          </div>
+        </div>
+        
+      </section>
+
+    </section>
+    <script>
+      let c = 1
+      let h = 1
+      function change(){
+        if(c%2!==0){
+          const cartButton = document.getElementById('cart').textContent="Added to Cart!"
+        }
+        else{
+          const cartButton = document.getElementById('cart').textContent="Add to Cart"
+        }
+        c+=1
+        
+      }
+      function changeColor(){
+        if(h%2!==0){
+          const cartButton = document.getElementById('bi').style.color="red"
+        }
+        else{
+          const cartButton = document.getElementById('bi').style.color="white"
+        }
+        h+=1
+        
+      }
+    </script>
+  </body>
+  
+</html>
